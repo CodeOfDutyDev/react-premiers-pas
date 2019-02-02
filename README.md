@@ -49,7 +49,9 @@ public
 └── manifest.json
 ```
 favicon.icon : contient l'icone "react" affiché sur l'onglet de chaque page web du projet.
-index.html: Fichier de base contenant notre id <App> pour injecter nos composants
+
+index.html: Fichier de base contenant notre id <App> pour injecter nos composants.
+
 manifest.json: Objet Json contenant les informations de votre site pour le navigateur. Ces informations seront utilisées dans le cadre d'une web application ou lorsque votre site est enregistré sur l'écran d'accueil mobile ou bureau de l'utilisateur.
 
 ### Démarrez l'application:
