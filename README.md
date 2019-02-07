@@ -6,10 +6,10 @@ Celui-ci retournera simplement du code html
 
 ## Notions abordées
 
-* [Fonction fléchée avec syntax ES6](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es){:target="_blank"}
+* [Fonction fléchée avec syntax ES6](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
 * Les composants React.
 
 ## Notions pratiquées
 * Fonction flêchée
-* Création d'un composant sous forme de fonction ( composant fonctionnel).
+* Création d'un composant sous forme de fonction (composant fonctionnel).
 
