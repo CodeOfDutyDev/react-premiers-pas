@@ -1,10 +1,12 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 
 const Articles = () => (
   <section>
     <div>
-      <h1>Titre article 1</h1>
+      <h1>
+        <Link to="/article/1">Titre article 1</Link>
+      </h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias cum
         eveniet sapiente illum, cumque unde similique, omnis quam quae amet
