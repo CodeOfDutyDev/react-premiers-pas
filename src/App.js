@@ -1,11 +1,15 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 
 import Homepage from "./components/Homepage";
 import AboutMe from "./components/AboutMe";
 import Articles from "./components/Articles";
+import Article from "./components/Article";
+import NotFound from "./components/NotFound";
+
+
 
 class App extends Component {
   render() {
@@ -35,16 +39,20 @@ class App extends Component {
                 </ul>
               </nav>
             </header>
-
-            <Route path="/homepage" exact component={Homepage} />
-            <Route path="/about-me" component={AboutMe} />
-            <Route path="/articles" component={Articles} />
-
+              <Switch>
+                <Route path="/homepage" exact component={Homepage} />
+                <Route path="/about-me" component={AboutMe} />
+                <Route path="/articles" exact component={Articles} />
+                <Route path="/article/:id" exact component={Article} />
+                <Route component={NotFound} />
+            </Switch>
           </Fragment>
         </Router>
       </div>
     );
   }
 }
+
+
 
 export default App;
