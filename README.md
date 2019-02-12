@@ -23,21 +23,25 @@ Nous pouvons transmettre les props à travers nos paramètres d'url ( souvenez v
 <img src="https://i.goopics.net/OyWJK.png" width="500px" /> 
 
 ```
-/*
-url cible ->  http://www.your-site/article/:id
-*/
 
-const Article = ( props ) => (
-    <section>
-       { article.filter(el => el.id === parseInt(props.match.params.id)).map((el, k) => {
-		return (
-			<div key={k}>
-				<h1>{el.title}</h1>
-				<p>{el.content}</p>
-			</div>
-				);
-	})}
-    </section>
-)
+
+const Article = props => (
+	
+  <section>
+    {article
+      .filter(el => el.id === parseInt(props.match.params.id))
+      .map((el, k) => {
+		  console.log(props)
+        return (
+          <div key={k}>
+            <h1>{el.title}</h1>
+            <p>{el.content}</p>
+          </div>
+        );
+      })}
+  </section>
+);
+
+export default Article;
 
 ```
