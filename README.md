@@ -1,6 +1,6 @@
 Séries de tutoriels pour une prise en main simple de react.
 
-# Création d'un composant React
+# Comprendre les props
 Dans cette 4ème leçon, nous allons aborder les props.
 
 ## Notions abordées
