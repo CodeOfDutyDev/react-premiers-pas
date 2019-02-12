@@ -14,10 +14,11 @@ Dans cette 4ème leçon, nous allons aborder les props.
 ### Qu'est ce qu'une "props" ?
  Dans React les propriétés ou accessoires communément appelées  props sont des données que l'on transmet d'un composant à un autre.
 
-### Comment transmettre nos props ?
-Nous pouvons transmettre les props à travers nos paramètres d'url ( souvenez vous de notre route "article/:id" ) ou en la définissant au sein du component recevant la props.
+### Comment utiliser les props ?
+Nous pouvons utiliser les props à travers nos paramètres d'url ( souvenez vous de notre route "/article/:id" ) ou en la définissant au sein du component recevant la props.
 
 **exemples** :
+
 ***props depuis react-router-dom***
 
 <img src="https://i.goopics.net/OyWJK.png" width="500px" /> 
