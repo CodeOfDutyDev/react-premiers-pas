@@ -1,12 +1,10 @@
 import React from "react";
 import article from "../mocks/article.json";
 
-const Article = (props) => {
-	const { match:{ params: { id } }} = props;
+const Article = (props) => (
 	
-	return (
 		<section>
-			{ article.filter(el => el.id === parseInt(id)).map((el, k) => {
+			{ article.filter(el => el.id === parseInt(props.match.params.id)).map((el, k) => {
       
 				return (
 					<div key={k}>
@@ -16,6 +14,5 @@ const Article = (props) => {
 				);
 			})}
 		</section>
-	);
-};
+);
 export default Article;
