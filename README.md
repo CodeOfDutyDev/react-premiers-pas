@@ -1,20 +1,43 @@
 Séries de tutoriels pour une prise en main simple de react.
 
 # Création d'un composant React
-Dans cette 3ème leçon, nous allons créer nos premières routes via react-router-dom.
+Dans cette 4ème leçon, nous allons aborder les props.
 
 ## Notions abordées
-* Routage des composants
-* Création de liens qui ajoutent des attributs de style à l'élément rendu s'il correspond à l'URL actuelle.
+* props 
 
 ## Notions pratiquées
-* Le routing des composants avec { BrowserRouter, Route, Switch } de reac-router-dom.
-* Styliser les liens du menu à travers { NavLink } de react-router-dom et activeClassName.
+* Récupérer les données de notre props depuis les paramètres l'url.
 
-## Package utilisé
-react-router-dom
+# Devenez Mr Props
+
+### Qu'est ce qu'une "props" ?
+ Dans React les propriétés ou accessoires communément appelées  props sont des données que l'on transmet d'un composant à un autre.
+
+### Comment transmettre nos props ?
+Nous pouvons transmettre les props à travers nos paramètres d'url ( souvenez vous de notre route "article/:id" ) ou en la définissant au sein du component recevant la props.
+
+**exemples** :
+***props depuis react-router-dom***
+
+<img src="https://i.goopics.net/OyWJK.png" width="500px" /> 
+
 ```
-npm install --save react-router-dom
+/*
+url cible ->  http://www.your-site/article/:id
+*/
+
+const Article = ( props ) => (
+    <section>
+       { article.filter(el => el.id === parseInt(props.match.params.id)).map((el, k) => {
+		return (
+			<div key={k}>
+				<h1>{el.title}</h1>
+				<p>{el.content}</p>
+			</div>
+				);
+	})}
+    </section>
+)
 
 ```
-
