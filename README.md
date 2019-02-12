@@ -19,7 +19,7 @@ Nous pouvons utiliser les props à travers nos paramètres d'url ( souvenez vous
 
 **exemples** :
 
-***props depuis react-router-dom***
+***props depuis notre route***
 
 <img src="https://i.goopics.net/OyWJK.png" width="500px" /> 
 
