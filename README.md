@@ -7,42 +7,31 @@ Dans cette 4ème leçon, nous allons aborder les props.
 * props 
 
 ## Notions pratiquées
-* Récupérer les données de notre props depuis les paramètres l'url.
-
-# Devenez Mr Props
-
-### Qu'est ce qu'une "props" ?
- Dans React les propriétés ou accessoires communément appelées  props sont des données que l'on transmet d'un composant à un autre.
-
-### Comment utiliser les props ?
-Nous pouvons utiliser les props à travers nos paramètres d'url ( souvenez vous de notre route "/article/:id" ) ou en la définissant au sein du component recevant la props.
+* Récupérer les données de notre props depuis le composant.
 
 **exemples** :
 
 ***props depuis notre route***
 
-<img src="https://i.goopics.net/OyWJK.png" width="500px" /> 
+<img src="https://goopics.net/i/QRb2N" width="500px" />
 
 ```
+import React, { Fragment } from "react";
 
-
-const Article = props => (
-	
-  <section>
-    {article
-      .filter(el => el.id === parseInt(props.match.params.id))
-      .map((el, k) => {
-		  console.log(props)
-        return (
-          <div key={k}>
-            <h1>{el.title}</h1>
-            <p>{el.content}</p>
-          </div>
-        );
-      })}
-  </section>
+const Comments = props => (
+	<Fragment>
+		<h2>commentaires :</h2>
+		{  
+            props.data.map((el, k) => (
+			<div key={k}>
+				<h3>{el.user}</h3>
+				<p>{el.content}</p>
+			</div>
+        ))
+        }
+	</Fragment>
 );
 
-export default Article;
+export default Comments;
 
 ```
