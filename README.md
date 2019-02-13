@@ -1,13 +1,18 @@
 Séries de tutoriels pour une prise en main simple de react.
 
-# Comprendre les props
-Dans cette 4ème leçon, nous allons aborder les props.
+# Comprendre le state
+Dans cette 5ème leçon, nous allons aborder le state.
+
+## Le state c'est quoi ?
+state est une fonctionnalité disponible uniquement pour les classes. Cependant dans la version 
+React 16.8, les Hooks ont été introduits et le state est à présent accessible depuis les fonctions via useState.
 
 ## Notions abordées
-* props 
+* state 
 
 ## Notions pratiquées
-* Récupérer les données de notre props depuis le composant.
+* initianiliser le state
+* modifier le state
 
 **exemples** :
 
