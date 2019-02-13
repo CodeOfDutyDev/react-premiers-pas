@@ -13,19 +13,19 @@ Dans cette 4ème leçon, nous allons aborder les props.
 
 ***props depuis notre route***
 
-<img src="https://goopics.net/i/QRb2N" width="500px" />
+<img src="https://i.goopics.net/QRb2N.png" width="500px" />
 
 ```
 import React, { Fragment } from "react";
 
 const Comments = props => (
 	<Fragment>
-		<h2>commentaires :</h2>
-		{  props.data.map((el, k) => (
-			  <div key={k}>
-				  <h3>{el.user}</h3>
-				  <p>{el.content}</p>
-			  </div>
+	    <h2>commentaires :</h2>
+	   { props.data.map((el, k) => (
+		<div key={k}>
+		    <h3>{el.user}</h3>
+		    <p>{el.content}</p>
+		</div>
       ))
     }
 	</Fragment>
