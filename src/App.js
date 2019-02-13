@@ -6,6 +6,7 @@ import "./App.css";
 import Homepage from "./components/Homepage";
 import AboutMe from "./components/AboutMe";
 import Articles from "./components/Articles";
+import Contact from './components/Contact';
 import Article from "./components/Article";
 import NotFound from "./components/NotFound";
 
@@ -36,14 +37,20 @@ class App extends Component {
                       About Me
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink activeClassName="App-current-link" className="App-link" to="/contact">
+                      Contact
+                    </NavLink>
+                  </li>
                 </ul>
               </nav>
             </header>
               <Switch>
-                <Route path="/homepage" exact component={Homepage} />
+                <Route path="/homepage" component={Homepage} exact />
                 <Route path="/about-me" component={AboutMe} />
-                <Route path="/articles" exact component={Articles} />
-                <Route path="/article/:id" exact component={Article} />
+                <Route path="/articles" component={Articles} exact />
+                <Route path="/contact" component={Contact} />
+                <Route path="/article/:id"  component={Article} exact />
                 <Route component={NotFound} />
             </Switch>
           </Fragment>
