@@ -1,5 +1,6 @@
 import React from "react";
 import post from "../mocks/article.json";
+import Comments from './Comments';
 
 /*
 
@@ -25,9 +26,11 @@ const Article = props => (
           <div key={k}>
             <h1>{el.title}</h1>
             <p>{el.content}</p>
+            <Comments data={el.comments}/>
           </div>
         );
       })}
+    
   </section>
 );
 export default Article;
