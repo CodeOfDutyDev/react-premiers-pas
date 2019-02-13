@@ -4,14 +4,42 @@
         "title": "Permiers pas avec react",
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo",
         "author":"Sammy",
-        "img":"url"
+        "img":"url",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Jhon Snow",
+                "content": "Je suis le gardien du mur",
+                "createdAt": "09/02/2019"
+            },
+            {
+                "id": 2,
+                "user": "Lord Tirion",
+                "content": "Un lannister paie toujours ses dettes",
+                "createdAt": "02/02/2019"
+            }
+        ]
     },
     {   
         "id":2,
         "title": "react premier component",
         "content": "Odit perferendis velit incidunt dignissimos numquam consequaturo",
         "author":"Sammy",
-        "img":"url"
+        "img":"url",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Lord of WW",
+                "content": "Je suis le roi des marcheurs blancs",
+                "createdAt": "13/01/2019"
+            },
+            {
+                "id": 2,
+                "user": "Mother of dragon's",
+                "content": "Je suis la reine des 7 couronnes",
+                "createdAt": "02/01/2019"
+            }
+        ]
     },
     {   
         "id":3,
