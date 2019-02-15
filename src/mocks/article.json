@@ -46,7 +46,21 @@
         "title": "react premières routes",
         "content": "Fuga enim fugiat corporis nisi aspernatur, in ipsa excepturi dignissimos",
         "author":"Sammy",
-        "img":"url"
+        "img":"url",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Lord of WW",
+                "content": "Je suis le roi des marcheurs blancs",
+                "createdAt": "13/01/2019"
+            },
+            {
+                "id": 2,
+                "user": "Mother of dragon's",
+                "content": "Je suis la reine des 7 couronnes",
+                "createdAt": "02/01/2019"
+            }
+        ]
     }
 
 
