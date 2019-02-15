@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import post from "../mocks/article.json";
-import Comments from './Comments';
+import Comments from "./Comments";
 
 /*
 
@@ -16,21 +16,23 @@ utilisation de parseInt pour passé la props en type number.
 
 */
 
-const Article = props => (
-  <section>
-    {post
-      .filter(el => el.id === parseInt(props.match.params.id))
-      .map((el, k) => {
+const Article = ({
+	match: {
+		params: { id }
+	}
+}) => {
+	const { author, content, comments } = post.find(el => el.id === parseInt(id));
 
-        return (
-          <div key={k}>
-            <h1>{el.title}</h1>
-            <p>{el.content}</p>
-            <Comments data={el.comments}/>
-          </div>
-        );
-      })}
-    
-  </section>
-);
+	return (
+		<section>
+			{
+				<Fragment>
+					<h3>{author}</h3>
+					<p>{content}</p>
+					<Comments data={comments} />
+				</Fragment>
+			}
+		</section>
+	);
+};
 export default Article;
