@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 
+/*
+
+Le state peut aussi être prédéfini par des données reçues en props.
+On destructure notre props pour obtenir notre objet data.
+data peut également être destructuré pour récupérer nos propriétés
+ex : const { lastname } = props.data;
+ex:  const { data: { lastname }} = props
+
+*/
 class Contact extends Component {
 
-// Initianilisation de notre state
-    state= {
-        firstname:"",
-        lastname:"",
-        email:""
-    }
+    constructor({ data }){
 
+        super({data})
+
+        // Initianilisation de notre state
+        this.state= {
+            firstname: data.firstname,
+            lastname:data.lastname,
+            email:data.email
+        }
+    }
+        
 // bind fonction.
     handleChange = this.handleChange.bind(this);
 
