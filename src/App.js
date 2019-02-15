@@ -11,6 +11,13 @@ import Article from "./components/Article";
 import NotFound from "./components/NotFound";
 
 
+// Création objet user pour exemple d'utilisation de state variables du component <Contact />
+const user = {
+  firstname:"sammy",
+  lastname:"nomad",
+  email:"email@mail.com"
+
+}
 
 class App extends Component {
   render() {
@@ -49,7 +56,10 @@ class App extends Component {
                 <Route path="/homepage" component={Homepage} exact />
                 <Route path="/about-me" component={AboutMe} />
                 <Route path="/articles" component={Articles} exact />
-                <Route path="/contact" component={Contact} />
+
+                {/* transmission de l'objet user en tant que props */}
+                <Route path="/contact" render={ () => <Contact data={user} />} /> 
+                
                 <Route path="/article/:id"  component={Article} exact />
                 <Route component={NotFound} />
             </Switch>
