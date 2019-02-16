@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 
 /*
-
-Le state peut aussi être prédéfini par des données reçues en props.
-On destructure notre props pour obtenir notre objet data.
-data peut également être destructuré pour récupérer nos propriétés
-ex : const { lastname } = props.data;
-ex:  const { data: { lastname }} = props
+Avec React nous pouvons écrire nos classes sans avoir à utiliser la méthode constructor et son mot-clé super.
+Nous pouvons avoir accès aux props de la manière qu'avec constructor(props){ super(props)}
+ react-create-app utilise le plugin Babel pour compiler le code afin de nous alléger l’écriture.
 
 */
 class Contact extends Component {
 
-    constructor({ data }){
-
-        super({data})
 
         // Initianilisation de notre state
-        this.state= {
-            firstname: data.firstname,
-            lastname:data.lastname,
-            email:data.email
+        state= {
+            firstname: this.props.data.firstname,
+            lastname:this.props.data.lastname,
+            email:this.props.data.email
         }
-    }
+
         
-// bind fonction.
-    handleChange = this.handleChange.bind(this);
 
 // charger le state lors de la saisie de texte dans nos inputs
-    handleChange(e){
+    handleChange = (e) =>{
+        console.log(this.props)
         e.preventDefault()
         const value = e.target.value;
         this.setState({[e.target.name]:value})
