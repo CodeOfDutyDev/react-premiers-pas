@@ -20,7 +20,6 @@ class Contact extends Component {
 
 // charger le state lors de la saisie de texte dans nos inputs
     handleChange = (e) =>{
-        console.log(this.props)
         e.preventDefault()
         const value = e.target.value;
         this.setState({[e.target.name]:value})
