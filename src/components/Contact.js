@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
 
+/*
+ Avec React nous pouvons écrire nos classes sans avoir à utiliser la méthode constructor et son mot-clé super.
+ react-create-app utilise le plugin Babel pour compiler le code afin de nous alléger l'écriture.
+
+ class Contact extends Component{
+     state={
+         firstname:"",
+         lastname:"",
+         email:""
+     }
+
+     render(){
+         return(
+             // something jsx
+         )
+     }
+ };
+
+*/
+
+
 class Contact extends Component {
 
+constructor(props){
+    super(props)
 // Initianilisation de notre state
-    state= {
+    this.state= {
         firstname:"",
         lastname:"",
         email:""
     }
-
-// bind fonction.
-    handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+}
 
 // charger le state lors de la saisie de texte dans nos inputs
     handleChange(e){
